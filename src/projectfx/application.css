@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color: teal;
+}
+
+Button{
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: grey;
+    -fx-boder-width: 5px;
+    -fx-border-style: solid;
+}
+#titleLabel{
+    -fx-font-size: 20;
+}
