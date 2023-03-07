@@ -1,6 +1,8 @@
 package projectfx;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -14,22 +16,14 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @FXML
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws SQLException {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("scenes/main.fxml"));
             primaryStage.setTitle("tk's projectFX");
             Scene scene = new Scene(root, 600, 400, Color.SKYBLUE);
-            // Image icon = new Image("Tykeaboyloy.png");
-            // primaryStage.getIcons().add(icon);
+
             scene.getStylesheets().add(getClass().getResource("style/application.css").toExternalForm());
             primaryStage.setScene(scene);
-            // Text name = new Text();
-            // name.setX(30);
-            // name.setY(50);
-            // name.setFont(Font.font("CascadiaCode", 30));
-            // name.setText("Tykeaboyloy ProjectFX");
-            // primaryStage.setFullScreen(true);
-            // primaryStage.setFullScreenExitHint("Press 'q' to exit fullscreen mode");
             primaryStage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
             primaryStage.show();
         } catch (IOException e) {
@@ -38,7 +32,11 @@ public class Main extends Application {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        ResultSet result = Database.get("select * from users");
+        while (result.next())
+            System.out.println(result.getString(1) + " is " + result.getInt(2));
+
         Application.launch(args);
     }
 }
