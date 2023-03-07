@@ -4,10 +4,9 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
@@ -16,6 +15,8 @@ public class MainController extends SceneController {
 
     @FXML
     private Circle blue_circle;
+    @FXML
+    private Button switch_scene;
     private double x;
     private double y;
     Parent root;
@@ -54,4 +55,6 @@ public class MainController extends SceneController {
         blue_circle.setCenterX(x--);
     }
 
+    public static void main(String[] args) {
+    }
 }

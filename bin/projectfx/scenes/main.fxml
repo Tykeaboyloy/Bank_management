@@ -5,14 +5,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectfx.controllers.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+   prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectfx.controllers.MainController">
    <children>
       <Button layoutX="286.0" layoutY="14.0" mnemonicParsing="false" onAction="#up" text="UP" />
       <Button layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#left" text="LEFT" />
       <Button layoutX="532.0" layoutY="187.0" mnemonicParsing="false" onAction="#right" text="RIGHT" />
       <Button layoutX="275.0" layoutY="360.0" mnemonicParsing="false" onAction="#down" text="DOWN" />
-      <Label fx:id="titleLabel" alignment="CENTER" layoutX="203.0" layoutY="68.0" prefHeight="16.0" prefWidth="200.0" text="tk javafx project" textAlignment="CENTER" />
-      <Circle fx:id="blue_circle" fill="#5ba5eb" layoutX="303.0" layoutY="200.0" onMouseClicked="#handleMouseClick" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button layoutX="105.0" layoutY="88.0" mnemonicParsing="false" onAction="#switchScene2" text="to scene2" />
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="203.0" layoutY="68.0" prefHeight="16.0"
+         prefWidth="200.0" text="tk javafx project" textAlignment="CENTER" />
+      <Circle fx:id="blue_circle" fill="#5ba5eb" layoutX="303.0" layoutY="200.0"
+         onMouseClicked="#handleMouseClick" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="switch_scene" layoutX="105.0" layoutY="88.0" mnemonicParsing="false"
+         onAction="#switchScene2" />
    </children>
 </AnchorPane>
