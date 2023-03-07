@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-public class Controller {
+public class MainController extends SceneController {
 
     @FXML
     private Circle blue_circle;
@@ -22,20 +22,8 @@ public class Controller {
     Stage stage;
     Scene scene;
 
-    public void switchToScene1(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../scenes/projectfx.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToScene2(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../scenes/scene2.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void switchScene2(ActionEvent event) throws IOException {
+        super.switchToScene2(event);
     }
 
     public void handleMouseClick() {

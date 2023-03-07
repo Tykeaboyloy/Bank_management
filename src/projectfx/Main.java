@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("scenes/projectfx.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("scenes/main.fxml"));
             primaryStage.setTitle("tk's projectFX");
             Scene scene = new Scene(root, 600, 400, Color.SKYBLUE);
             // Image icon = new Image("Tykeaboyloy.png");
